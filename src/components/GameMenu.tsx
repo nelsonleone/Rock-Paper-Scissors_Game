@@ -94,6 +94,7 @@ export default function GameMenu(props:Props){
                         aria-expanded={showGameRules} 
                         className="close-game-modal-btn"
                         >
+                        <span className="AT-only">Close Modal</span>
                         <img src="/images/icon-close.svg" alt="close modal" />
                      </button>
                   </div>
