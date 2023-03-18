@@ -1,0 +1,58 @@
+@keyframes characterAnimation {
+   0%   { transform: rotate(0deg); }
+   10%  { transform: rotate(36deg); }
+   20%  { transform: rotate(72deg); }
+   30%  { transform: rotate(108deg); }
+   40%  { transform: rotate(144deg); }
+   50%  { transform: rotate(180deg); }
+   60%  { transform: rotate(216deg); }
+   70%  { transform: rotate(252deg); }
+   80%  { transform: rotate(288deg); }
+   90%  { transform: rotate(324deg); }
+   100% { transform: rotate(360deg); }
+}
+
+
+@keyframes glow-effect {
+  0% {
+    box-shadow: 0 0 0 hsla(214, 47%, 23%, 0.829);
+  }
+  25% {
+    box-shadow: 0 0 0 1em hsla(214, 47%, 23%, 0.651), 0 0 0 4em hsla(214, 47%, 23%, 0.582), 0 0 0 7em hsla(214, 47%, 23%, 0.445);
+  }
+  50% {
+    box-shadow: 0 0 0 2em hsla(214, 47%, 23%, 0.651), 0 0 0 5em hsla(214, 47%, 23%, 0.582), 0 0 0 9em hsla(214, 47%, 23%, 0.445);
+  }
+  75% {
+    box-shadow: 0 0 0 3em hsla(214, 47%, 23%, 0.76), 0 0 0 7em hsla(214, 47%, 23%, 0.39), 0 0 0 10em hsla(214, 47%, 23%, 0.432);
+  }
+  100% {
+    box-shadow: 0 0 0 4em hsla(214, 47%, 23%, 0.76), 0 0 0 7em hsla(214, 47%, 23%, 0.39), 0 0 0 10em hsla(214, 47%, 23%, 0.432);
+  }
+}
+
+@keyframes glow-effect-smallScreen {
+  0% {
+    box-shadow: 0 0 0 hsl(214, 47%, 23%);
+  }
+  50% {
+    box-shadow: 0 0 0 1em hsla(214, 35%, 35%, 0.651), 0 0 0 2.5em hsla(214, 33%, 32%, 0.582), 0 0 0 4em hsla(216, 30%, 27%, 0.445);
+  }
+  100% {
+    box-shadow: 0 0 0 1em hsla(214, 38%, 28%, 0.76), 0 0 0 2.5em hsla(214, 21%, 37%, 0.39), 0 0 0 4em hsla(213, 27%, 33%, 0.432);
+  }
+}
+
+ 
+
+@keyframes addBasis{
+  from{max-width:38em;}
+  to{max-width:48em}
+}
+
+@keyframes fadeIn{
+  0% {opacity: 0;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+

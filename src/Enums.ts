@@ -1,0 +1,36 @@
+export enum GAME_MODE {
+   advanced = "ADVANCED",
+   normal = "NORMAL"
+}
+
+export enum GAME_CHARACTERS {
+   SCISSORS = "SCISSORS",
+   ROCK = "ROCK",
+   PAPER = "PAPER",
+   LIZARD = "LIZARD",
+   SPOCK = "SPOCK"
+}
+
+export enum AI_POSSIBLE_CHOICES_NORMAL{
+   SCISSORS = "SCISSORS",
+   ROCK = "ROCK",
+   PAPER = "PAPER",
+}
+
+
+export enum WINNEROPTIONS {
+   PLAYER = "PLAYER",
+   COMPUTER = "COMPUTER",
+   TIE = "TIE"
+}
+
+export enum DISPATCH_ACTION_TYPES{
+   CHANGE_GAME_MODE,
+   RESTART_GAME,
+   CLEAR_SCORE,
+   SHOW_MODAL,
+   SET_PLAYERS_CHOICE,
+   SET_AICHOICE_CHOICE,
+   SET_SHOW_RESULT,
+   UPDATE_SCORE
+}

@@ -1,0 +1,117 @@
+@use './utils/' as *;
+
+.game-menu{
+   position: absolute;
+   bottom:1em;
+   right:1em;
+   z-index:10;
+
+   .menu-toggle-btn{
+      color:var(--White);
+   }
+
+   &-content{
+      position: absolute;
+      top:-3em;
+      border-radius: 5px;
+      left:-10em;
+      @include flexObj($align:flex-start,$gap:20px);
+      background-color:var(--White);
+      padding:.6em;
+      box-shadow: 0 0 4px 4px rgba(24, 29, 56, 0.384);
+
+      button{
+         font-size:.9rem;
+         text-decoration: underline orangered;
+
+         &:hover{
+            opacity: .8;
+         }
+      }
+
+      .clear-score{
+         color:green;
+      }
+
+      .rules-btn{
+         text-transform: uppercase;
+      }
+
+   }
+
+   @include MediaQueryLS{
+      right:6em;
+
+      &-content{
+         top:-4em;
+      }
+   }
+}
+
+.game-rule-modal{
+   backdrop-filter: brightness(60%);
+   position: fixed;
+   top:0;
+   bottom:0;
+   right:0;
+   left:0;
+   margin:auto;
+   z-index:100;
+
+   &-inner{
+      position: relative;
+      background-color:var(--White);
+      height:100%;
+      @include flexObj($direction:column,$justify:center);
+
+      h2{
+         position: relative;
+         top:-3em;
+         color:var(--dark-Text-color);
+      }
+      .rules-image{
+         width:15em;
+      }
+   
+      .close-game-modal-btn{
+         position: absolute;
+         bottom:3em;
+         left:0;
+         right:0;
+         margin:auto;
+         display:block;
+         transition: all .2s ease-in;
+
+         &:hover{
+            scale:1.1;
+         }
+      }
+   }
+
+   @include MediaQueryLS{
+      @include flexObj($justify:center,$direction:column);
+      
+      &-inner{
+         height:auto;
+         transform: translateY(-1em);
+         display:block;
+         border-radius: 10px;
+         padding:.7em 1.6em ;
+
+         .rules-image{
+            width:17em;
+         }
+
+         .flex-row{
+            margin-block:.5em;
+         }
+
+         h2,
+         .close-game-modal-btn{
+            position: unset;
+            margin:.4em .6em;
+         }
+      }
+
+   }
+}

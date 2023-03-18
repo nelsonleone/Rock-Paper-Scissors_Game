@@ -1,0 +1,27 @@
+
+@mixin flexObj($align:center,$gap:0,$justify:space-between,$direction:row){
+   display:flex;
+   align-items:$align;
+   justify-content: $justify;
+   flex-direction: $direction;
+   gap:$gap;
+}
+
+@mixin centerObj($left:0,$right:0,$top:0,$bottom:0){
+   position: absolute;
+   left:$left;
+   right:$right;
+   top:$top;
+   bottom:$bottom;
+   margin:auto;
+}
+
+@mixin MediaQueryLS{
+   @media (min-width:50rem) {
+      @content;
+   }
+}
+
+.flex-row{
+ @include flexObj;
+}

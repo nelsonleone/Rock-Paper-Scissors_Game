@@ -1,0 +1,48 @@
+@use './utils/' as *;
+
+.modal{
+   position: fixed;
+   @include centerObj;
+   @include flexObj($justify:center,$direction:column);
+   z-index:200;
+   backdrop-filter: brightness(60%) ;
+
+   &>div{
+      background-color: var(--White);
+      border-radius: 10px;
+      padding:1em;
+      max-width:90%;
+      margin:auto;
+
+      @include MediaQueryLS{
+         max-width:50%;
+      }
+
+      h2{
+         color:var(--dark-Text-color);
+         text-transform: uppercase;
+         max-width:80%;
+         margin:auto;
+         text-align: center;
+      }
+
+      .flex-row{
+         margin-block:1em;
+
+         button{
+            width:6em;
+            height:2.5em;
+            padding:.4em;
+            border-radius: 8px;
+            background-color: var(--dark-Text-color);
+            color:var(--White);
+            font-size: inherit;
+            transition: .2s ease-in-out;
+
+            &:hover{
+               opacity: .8;
+            }
+         }
+      }
+   }
+}

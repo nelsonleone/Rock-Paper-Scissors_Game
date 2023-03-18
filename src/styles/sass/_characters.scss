@@ -1,0 +1,91 @@
+@use './utils/' as *;
+
+
+.character{
+   border-radius: 50%;
+   aspect-ratio: 1/1;
+   width:9em;
+   position: relative;
+   transition: scale .3s ease-in-out;
+   box-shadow: inset -2px -2px 4px 1px #24242363;
+   z-index:10;
+
+   &::after{
+      content:"";
+      position: absolute;
+      display:block;
+      border-radius: 50%;
+      width:75%;
+      position: absolute;
+      @include centerObj;
+      margin:auto;
+      aspect-ratio: 1/1;
+      background-color: var(--White);
+      box-shadow: 0 7px 0 3px inset #1b1a1a2c;
+   }
+   
+   img{
+      width:2.6em;
+      @include centerObj;
+      z-index:10;
+   }
+
+   @include MediaQueryLS{
+      width:15em;
+
+      img{
+         width:6em;
+      }
+   }
+}
+
+.playersChoice .character{
+   img{
+      animation: characterAnimation 1.7s linear 1;
+   }
+}
+
+.rock-character{
+   background: linear-gradient(to right,var(--rock-gradient));
+}
+.paper-character{
+   background: linear-gradient(to right,var(--paper-gradient));
+}
+.scissors-character{
+   background: linear-gradient(to right,var(--scissors-gradient));
+}
+.lizard-character{
+   background: linear-gradient(to right,var(--lizard-gradient));
+}
+.spock-character{
+   background: linear-gradient(to right,var(--cyan-gradient));
+}
+
+.placeholder-bg{
+   display:block;
+   border-radius: 50%;
+   width:8em;
+   margin-right:1em;
+   aspect-ratio: 1/1;
+   background-color: hsla(236, 42%, 14%, 0.404);
+
+   @include MediaQueryLS{
+      width:12em;
+      position: absolute;
+      @include centerObj;
+      margin:auto;
+      margin-right:1em;
+   }
+}
+
+.isWinner{
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-name: glow-effect-smallScreen;
+  animation-iteration-count: infinite;
+  z-index: 5;
+
+  @include MediaQueryLS{
+   animation-name: glow-effect;
+  }
+}
