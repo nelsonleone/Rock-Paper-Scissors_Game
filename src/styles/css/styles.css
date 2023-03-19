@@ -55,6 +55,14 @@ img {
   gap: 0;
 }
 
+.AT-only {
+  font-size: 1px;
+  position: absolute;
+  left: -1000000px;
+  top: -1000000px;
+  width: 1px;
+}
+
 .header {
   position: relative;
   z-index: 10;
@@ -121,6 +129,8 @@ img {
 }
 .game-menu .menu-toggle-btn {
   color: var(--White);
+  font-size: 2.2rem;
+  margin-top: 0.5em;
 }
 .game-menu-content {
   position: absolute;

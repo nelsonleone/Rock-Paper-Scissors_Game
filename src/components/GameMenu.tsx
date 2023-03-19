@@ -1,6 +1,6 @@
 import { FC, useCallback, useContext, useEffect, useRef, useState } from "react"
-import Hamburger  from 'hamburger-react'
 import { GAME_MODE } from "../Enums";
+import { BiMenuAltRight } from 'react-icons/bi'
 import { changeGameMode } from "../utils/contextFunctions";
 import { Context } from "../appContext/context";
 import { handleChangeModeBtnClick, handleClearScoreBtnClick } from "../utils/gameMenuFunction";
@@ -52,16 +52,17 @@ export default function GameMenu(props:Props){
       <>
          <div className="game-menu">
             <button onClick={() => setShowMenu(!showMenu)} ref={showMenuToggleRef} className="menu-toggle-btn">
-               <Hamburger toggled={showMenu} size={22} />
+              <BiMenuAltRight />
+              <span className="AT-only">Open Menu</span>
             </button>
             {
                showMenu &&
                <div className="game-menu-content" ref={menuRef} >
                   <button
-                  className="rules-btn" 
-                  aria-controls="game-rules-modal"
-                  aria-expanded={showGameRules}
-                  onClick={handleGameRulesShow}
+                     className="rules-btn" 
+                     aria-controls="game-rules-modal"
+                     aria-expanded={showGameRules}
+                     onClick={handleGameRulesShow}
                   >
                      Rules
                   </button>
