@@ -9,6 +9,7 @@ export default function Header({gameLogo,score}:Props){
  return(
    <header className="header">
       <div>
+         <h1 className="AT_only">Rock Paper Scissors Game</h1>
          <img src={gameLogo} alt="logo" />
          <div className="score-container">
             <span>Score</span>
