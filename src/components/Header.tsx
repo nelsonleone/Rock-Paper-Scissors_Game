@@ -13,7 +13,7 @@ export default function Header({gameLogo,score}:Props){
          <img src={gameLogo} alt="logo" />
          <div className="score-container">
             <span>Score</span>
-            <h3>{score}</h3>
+            <h2>{score}</h2>
          </div>
       </div>
    </header>
