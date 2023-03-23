@@ -19,5 +19,3 @@ export default function Header({gameLogo,score}:Props){
    </header>
  )
 }
-
-(Header as FC).propTypes = {}
