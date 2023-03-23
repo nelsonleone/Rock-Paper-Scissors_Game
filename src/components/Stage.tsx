@@ -1,4 +1,4 @@
-import { FC, ReactNode, useContext, useEffect, useState } from "react";
+import { ReactNode, useContext, useEffect, useState } from "react";
 import { Context } from "../appContext/context";
 import { GAME_CHARACTERS, WINNEROPTIONS } from "../Enums";
 import { setRestartGame, setUpdatedScore } from "../utils/contextFunctions";
