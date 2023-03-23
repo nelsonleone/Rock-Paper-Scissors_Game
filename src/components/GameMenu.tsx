@@ -1,4 +1,4 @@
-import { FC, useCallback, useContext, useEffect, useRef, useState } from "react"
+import { useCallback, useContext, useEffect, useRef, useState } from "react"
 import { GAME_MODE } from "../Enums";
 import { BiMenuAltRight } from 'react-icons/bi'
 import { changeGameMode } from "../utils/contextFunctions";
@@ -106,4 +106,3 @@ export default function GameMenu(props:Props){
       </>
    )
 }
-(GameMenu as FC)
